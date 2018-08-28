@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="9532" systemVersion="14F27" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="9532"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner"/>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <customView identifier="Subject Overview" id="c22-O7-iKe" customClass="SubjectOverviewCell" customModule="GPA_Manager" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="480" height="70"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <subviews>
+                <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="r1W-Ic-2yh">
+                    <rect key="frame" x="25" y="16" width="37" height="37"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="37" id="Uhx-8V-lHc"/>
+                        <constraint firstAttribute="width" constant="37" id="Uth-a8-Qpw"/>
+                    </constraints>
+                    <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="Economics" id="dUE-SO-DRk"/>
+                </imageView>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="fUt-t0-Cr0">
+                    <rect key="frame" x="77" y="24" width="311" height="25"/>
+                    <textFieldCell key="cell" lineBreakMode="truncatingTail" truncatesLastVisibleLine="YES" selectable="YES" sendsActionOnEndEditing="YES" title="Economics HL" id="Xki-yv-MoC">
+                        <font key="font" size="17" name="Raleway"/>
+                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" red="0.92415171967455623" green="0.92415171967455623" blue="0.92415171967455623" alpha="1" colorSpace="calibratedRGB"/>
+                    </textFieldCell>
+                </textField>
+                <box horizontalHuggingPriority="750" title="Box" boxType="separator" titlePosition="noTitle" translatesAutoresizingMaskIntoConstraints="NO" id="Lvw-Jo-qw4">
+                    <rect key="frame" x="392" y="11" width="5" height="48"/>
+                    <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
+                    <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <font key="titleFont" metaFont="system"/>
+                </box>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Svr-Ui-CNk">
+                    <rect key="frame" x="417" y="27" width="34" height="26"/>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="7/7" id="ISe-TV-q5w">
+                        <font key="font" size="18" name="Raleway"/>
+                        <color key="textColor" red="0.0" green="0.029270119863013696" blue="0.075850813356164379" alpha="0.84999999999999998" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="HCH-6Z-HQ6">
+                    <rect key="frame" x="412" y="14" width="45" height="15"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="41" id="g9T-aB-zkK"/>
+                    </constraints>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="82%" id="VTX-LT-imo">
+                        <font key="font" size="10.5" name="Raleway"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <box verticalHuggingPriority="750" alphaValue="0.5" title="Box" boxType="separator" titlePosition="noTitle" translatesAutoresizingMaskIntoConstraints="NO" id="Eb9-k6-Zfx">
+                    <rect key="frame" x="20" y="-2" width="440" height="5"/>
+                    <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
+                    <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <font key="titleFont" metaFont="system"/>
+                </box>
+            </subviews>
+            <constraints>
+                <constraint firstItem="Svr-Ui-CNk" firstAttribute="top" secondItem="c22-O7-iKe" secondAttribute="top" constant="17" id="5og-OZ-KVB"/>
+                <constraint firstItem="r1W-Ic-2yh" firstAttribute="top" secondItem="c22-O7-iKe" secondAttribute="top" constant="17" id="AjP-nG-Afy"/>
+                <constraint firstAttribute="bottom" secondItem="Eb9-k6-Zfx" secondAttribute="bottom" id="CEu-zD-fNP"/>
+                <constraint firstItem="HCH-6Z-HQ6" firstAttribute="top" secondItem="c22-O7-iKe" secondAttribute="top" constant="41" id="LoS-d6-wDW"/>
+                <constraint firstItem="r1W-Ic-2yh" firstAttribute="leading" secondItem="c22-O7-iKe" secondAttribute="leading" constant="25" id="P3b-TA-PKp"/>
+                <constraint firstItem="Lvw-Jo-qw4" firstAttribute="leading" secondItem="fUt-t0-Cr0" secondAttribute="trailing" constant="8" id="SWD-5a-ZVu"/>
+                <constraint firstItem="Lvw-Jo-qw4" firstAttribute="top" secondItem="c22-O7-iKe" secondAttribute="top" constant="11" id="TpD-Fj-18Z"/>
+                <constraint firstItem="fUt-t0-Cr0" firstAttribute="leading" secondItem="r1W-Ic-2yh" secondAttribute="trailing" constant="17" id="VW4-I9-dFa"/>
+                <constraint firstItem="Eb9-k6-Zfx" firstAttribute="leading" secondItem="c22-O7-iKe" secondAttribute="leading" constant="20" id="WCJ-0b-7vZ"/>
+                <constraint firstAttribute="trailing" secondItem="Eb9-k6-Zfx" secondAttribute="trailing" constant="20" id="fh4-Gb-DR8"/>
+                <constraint firstItem="fUt-t0-Cr0" firstAttribute="top" secondItem="c22-O7-iKe" secondAttribute="top" constant="21" id="hAg-6u-pa2"/>
+                <constraint firstAttribute="trailing" secondItem="Lvw-Jo-qw4" secondAttribute="trailing" constant="85" id="nNF-2m-ZEy"/>
+                <constraint firstAttribute="trailing" secondItem="HCH-6Z-HQ6" secondAttribute="trailing" constant="25" id="sBa-QD-qgu"/>
+                <constraint firstAttribute="trailing" secondItem="Svr-Ui-CNk" secondAttribute="trailing" constant="31" id="trQ-JA-Vxy"/>
+                <constraint firstAttribute="bottom" secondItem="Lvw-Jo-qw4" secondAttribute="bottom" constant="11" id="z8s-W7-lqR"/>
+            </constraints>
+            <connections>
+                <outlet property="score" destination="Svr-Ui-CNk" id="PyY-aw-fJt"/>
+                <outlet property="subjectImage" destination="r1W-Ic-2yh" id="3XJ-P3-T6q"/>
+                <outlet property="subjectName" destination="fUt-t0-Cr0" id="5oy-JF-Fpd"/>
+                <outlet property="subjectPercentage" destination="HCH-6Z-HQ6" id="tWG-sh-GrR"/>
+            </connections>
+            <point key="canvasLocation" x="308" y="194"/>
+        </customView>
+    </objects>
+    <resources>
+        <image name="Economics" width="120" height="120"/>
+    </resources>
+</document>

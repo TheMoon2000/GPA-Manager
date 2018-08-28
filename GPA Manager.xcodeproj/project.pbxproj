@@ -1,0 +1,426 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		CC0A906F1ED5B69D005C8552 /* OnOffSwitchControlAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CC0A906A1ED5B69D005C8552 /* OnOffSwitchControlAppDelegate.m */; };
+		CC0A90701ED5B69D005C8552 /* OnOffSwitchControlCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CC0A906C1ED5B69D005C8552 /* OnOffSwitchControlCell.m */; };
+		CC0A90711ED5B69D005C8552 /* OnOffSwitchControl.m in Sources */ = {isa = PBXBuildFile; fileRef = CC0A906E1ED5B69D005C8552 /* OnOffSwitchControl.m */; };
+		CC0A90731ED5B9A4005C8552 /* NewSubjectVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC0A90721ED5B9A4005C8552 /* NewSubjectVC.swift */; };
+		CC0A90921ED6D7FD005C8552 /* AdjustmentKnob.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC0A90911ED6D7FD005C8552 /* AdjustmentKnob.swift */; };
+		CC14DBBA1ED88959006357FA /* HighlightButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC14DBB91ED88959006357FA /* HighlightButton.swift */; };
+		CC14DBBC1ED88A6C006357FA /* SubjectDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC14DBBB1ED88A6C006357FA /* SubjectDetailView.swift */; };
+		CC14DBC01ED8954C006357FA /* PieChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC14DBBF1ED8954C006357FA /* PieChart.swift */; };
+		CC208CBC1EDBDF9400D3E17A /* AssignmentTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC208CBB1EDBDF9400D3E17A /* AssignmentTableView.swift */; };
+		CC46BAB71ED839A900D36B10 /* Terminal.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC46BAB61ED839A900D36B10 /* Terminal.swift */; };
+		CC6747801EDF028D000A7591 /* AddDatabaseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC67477F1EDF028D000A7591 /* AddDatabaseVC.swift */; };
+		CC7DA2191ED461010096FF2E /* SubjectSideBarView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CC7DA2181ED461010096FF2E /* SubjectSideBarView.xib */; };
+		CC7DA21B1ED461C00096FF2E /* SubjectSideBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC7DA21A1ED461C00096FF2E /* SubjectSideBarView.swift */; };
+		CC7DA21D1ED463C80096FF2E /* Subject.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC7DA21C1ED463C80096FF2E /* Subject.swift */; };
+		CC7DA2231ED532150096FF2E /* SubjectOverviewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CC7DA2221ED532150096FF2E /* SubjectOverviewCell.xib */; };
+		CC7DA2251ED534A30096FF2E /* SubjectOverviewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC7DA2241ED534A30096FF2E /* SubjectOverviewCell.swift */; };
+		CC8FF4D51ED44AAC00FD8AB4 /* CircularProgress.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC8FF4D41ED44AAC00FD8AB4 /* CircularProgress.swift */; };
+		CC9584F71EDAD9540024C202 /* AssignmentCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CC9584F61EDAD9540024C202 /* AssignmentCell.xib */; };
+		CC9584FD1EDAE37B0024C202 /* HorizontalSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC9584FC1EDAE37B0024C202 /* HorizontalSlider.swift */; };
+		CC9584FF1EDAE65E0024C202 /* AssignmentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC9584FE1EDAE65E0024C202 /* AssignmentCell.swift */; };
+		CC9585011EDB049C0024C202 /* AddAssignmentVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC9585001EDB049C0024C202 /* AddAssignmentVC.swift */; };
+		CCE1768D1ED4454400FD3676 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCE1768C1ED4454400FD3676 /* AppDelegate.swift */; };
+		CCE1768F1ED4454400FD3676 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCE1768E1ED4454400FD3676 /* ViewController.swift */; };
+		CCE176911ED4454400FD3676 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CCE176901ED4454400FD3676 /* Assets.xcassets */; };
+		CCE176941ED4454400FD3676 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CCE176921ED4454400FD3676 /* Main.storyboard */; };
+		CCE1769C1ED446B700FD3676 /* GPAWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCE1769B1ED446B700FD3676 /* GPAWindowController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		CC0A90681ED5B69C005C8552 /* GPA Manager-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GPA Manager-Bridging-Header.h"; sourceTree = "<group>"; };
+		CC0A90691ED5B69D005C8552 /* OnOffSwitchControlAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OnOffSwitchControlAppDelegate.h; sourceTree = "<group>"; };
+		CC0A906A1ED5B69D005C8552 /* OnOffSwitchControlAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OnOffSwitchControlAppDelegate.m; sourceTree = "<group>"; };
+		CC0A906B1ED5B69D005C8552 /* OnOffSwitchControlCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OnOffSwitchControlCell.h; sourceTree = "<group>"; };
+		CC0A906C1ED5B69D005C8552 /* OnOffSwitchControlCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OnOffSwitchControlCell.m; sourceTree = "<group>"; };
+		CC0A906D1ED5B69D005C8552 /* OnOffSwitchControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OnOffSwitchControl.h; sourceTree = "<group>"; };
+		CC0A906E1ED5B69D005C8552 /* OnOffSwitchControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OnOffSwitchControl.m; sourceTree = "<group>"; };
+		CC0A90721ED5B9A4005C8552 /* NewSubjectVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewSubjectVC.swift; sourceTree = "<group>"; };
+		CC0A90911ED6D7FD005C8552 /* AdjustmentKnob.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdjustmentKnob.swift; sourceTree = "<group>"; };
+		CC14DBB91ED88959006357FA /* HighlightButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HighlightButton.swift; sourceTree = "<group>"; };
+		CC14DBBB1ED88A6C006357FA /* SubjectDetailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubjectDetailView.swift; sourceTree = "<group>"; };
+		CC14DBBF1ED8954C006357FA /* PieChart.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PieChart.swift; sourceTree = "<group>"; };
+		CC208CBB1EDBDF9400D3E17A /* AssignmentTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AssignmentTableView.swift; sourceTree = "<group>"; };
+		CC46BAB61ED839A900D36B10 /* Terminal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Terminal.swift; sourceTree = "<group>"; };
+		CC67477F1EDF028D000A7591 /* AddDatabaseVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddDatabaseVC.swift; sourceTree = "<group>"; };
+		CC7DA2181ED461010096FF2E /* SubjectSideBarView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SubjectSideBarView.xib; sourceTree = "<group>"; };
+		CC7DA21A1ED461C00096FF2E /* SubjectSideBarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubjectSideBarView.swift; sourceTree = "<group>"; };
+		CC7DA21C1ED463C80096FF2E /* Subject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Subject.swift; sourceTree = "<group>"; };
+		CC7DA2221ED532150096FF2E /* SubjectOverviewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SubjectOverviewCell.xib; sourceTree = "<group>"; };
+		CC7DA2241ED534A30096FF2E /* SubjectOverviewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubjectOverviewCell.swift; sourceTree = "<group>"; };
+		CC8FF4D41ED44AAC00FD8AB4 /* CircularProgress.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircularProgress.swift; sourceTree = "<group>"; };
+		CC9584F61EDAD9540024C202 /* AssignmentCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AssignmentCell.xib; sourceTree = "<group>"; };
+		CC9584FC1EDAE37B0024C202 /* HorizontalSlider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HorizontalSlider.swift; sourceTree = "<group>"; };
+		CC9584FE1EDAE65E0024C202 /* AssignmentCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AssignmentCell.swift; sourceTree = "<group>"; };
+		CC9585001EDB049C0024C202 /* AddAssignmentVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddAssignmentVC.swift; sourceTree = "<group>"; };
+		CCE176891ED4454400FD3676 /* GPA Manager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "GPA Manager.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CCE1768C1ED4454400FD3676 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		CCE1768E1ED4454400FD3676 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		CCE176901ED4454400FD3676 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CCE176931ED4454400FD3676 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		CCE176951ED4454400FD3676 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CCE1769B1ED446B700FD3676 /* GPAWindowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GPAWindowController.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CCE176861ED4454400FD3676 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		CC14DBBD1ED89433006357FA /* Subject View */ = {
+			isa = PBXGroup;
+			children = (
+				CC14DBBB1ED88A6C006357FA /* SubjectDetailView.swift */,
+				CC14DBB91ED88959006357FA /* HighlightButton.swift */,
+				CC14DBBF1ED8954C006357FA /* PieChart.swift */,
+			);
+			name = "Subject View";
+			sourceTree = "<group>";
+		};
+		CC14DBBE1ED89442006357FA /* Add Subject View */ = {
+			isa = PBXGroup;
+			children = (
+				CC0A90911ED6D7FD005C8552 /* AdjustmentKnob.swift */,
+				CC0A90721ED5B9A4005C8552 /* NewSubjectVC.swift */,
+			);
+			name = "Add Subject View";
+			sourceTree = "<group>";
+		};
+		CC9584F41EDAD9050024C202 /* Subjec Overview Table */ = {
+			isa = PBXGroup;
+			children = (
+				CC7DA2241ED534A30096FF2E /* SubjectOverviewCell.swift */,
+				CC7DA2221ED532150096FF2E /* SubjectOverviewCell.xib */,
+			);
+			name = "Subjec Overview Table";
+			sourceTree = "<group>";
+		};
+		CC9584F51EDAD90F0024C202 /* Side Bar */ = {
+			isa = PBXGroup;
+			children = (
+				CC7DA21A1ED461C00096FF2E /* SubjectSideBarView.swift */,
+				CC7DA2181ED461010096FF2E /* SubjectSideBarView.xib */,
+			);
+			name = "Side Bar";
+			sourceTree = "<group>";
+		};
+		CCE176801ED4454400FD3676 = {
+			isa = PBXGroup;
+			children = (
+				CC0A90691ED5B69D005C8552 /* OnOffSwitchControlAppDelegate.h */,
+				CC0A906A1ED5B69D005C8552 /* OnOffSwitchControlAppDelegate.m */,
+				CC0A906B1ED5B69D005C8552 /* OnOffSwitchControlCell.h */,
+				CC0A906C1ED5B69D005C8552 /* OnOffSwitchControlCell.m */,
+				CC0A906D1ED5B69D005C8552 /* OnOffSwitchControl.h */,
+				CC0A906E1ED5B69D005C8552 /* OnOffSwitchControl.m */,
+				CCE1768B1ED4454400FD3676 /* GPA Manager */,
+				CCE1768A1ED4454400FD3676 /* Products */,
+				CC0A90681ED5B69C005C8552 /* GPA Manager-Bridging-Header.h */,
+			);
+			sourceTree = "<group>";
+		};
+		CCE1768A1ED4454400FD3676 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CCE176891ED4454400FD3676 /* GPA Manager.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CCE1768B1ED4454400FD3676 /* GPA Manager */ = {
+			isa = PBXGroup;
+			children = (
+				CCE1768C1ED4454400FD3676 /* AppDelegate.swift */,
+				CCE1768E1ED4454400FD3676 /* ViewController.swift */,
+				CCE1769B1ED446B700FD3676 /* GPAWindowController.swift */,
+				CCE176921ED4454400FD3676 /* Main.storyboard */,
+				CC7DA21C1ED463C80096FF2E /* Subject.swift */,
+				CC67477F1EDF028D000A7591 /* AddDatabaseVC.swift */,
+				CC14DBBD1ED89433006357FA /* Subject View */,
+				CC14DBBE1ED89442006357FA /* Add Subject View */,
+				CC9584F41EDAD9050024C202 /* Subjec Overview Table */,
+				CC9584F51EDAD90F0024C202 /* Side Bar */,
+				CC9585001EDB049C0024C202 /* AddAssignmentVC.swift */,
+				CC208CBB1EDBDF9400D3E17A /* AssignmentTableView.swift */,
+				CC9584FE1EDAE65E0024C202 /* AssignmentCell.swift */,
+				CC9584F61EDAD9540024C202 /* AssignmentCell.xib */,
+				CC9584FC1EDAE37B0024C202 /* HorizontalSlider.swift */,
+				CCE176901ED4454400FD3676 /* Assets.xcassets */,
+				CC8FF4D41ED44AAC00FD8AB4 /* CircularProgress.swift */,
+				CC46BAB61ED839A900D36B10 /* Terminal.swift */,
+				CCE176951ED4454400FD3676 /* Info.plist */,
+			);
+			path = "GPA Manager";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CCE176881ED4454400FD3676 /* GPA Manager */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CCE176981ED4454400FD3676 /* Build configuration list for PBXNativeTarget "GPA Manager" */;
+			buildPhases = (
+				CCE176851ED4454400FD3676 /* Sources */,
+				CCE176861ED4454400FD3676 /* Frameworks */,
+				CCE176871ED4454400FD3676 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "GPA Manager";
+			productName = "GPA Manager";
+			productReference = CCE176891ED4454400FD3676 /* GPA Manager.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CCE176811ED4454400FD3676 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0720;
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = "Jerry Shan";
+				TargetAttributes = {
+					CCE176881ED4454400FD3676 = {
+						CreatedOnToolsVersion = 7.2.1;
+						LastSwiftMigration = 0820;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = CCE176841ED4454400FD3676 /* Build configuration list for PBXProject "GPA Manager" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CCE176801ED4454400FD3676;
+			productRefGroup = CCE1768A1ED4454400FD3676 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CCE176881ED4454400FD3676 /* GPA Manager */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CCE176871ED4454400FD3676 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CCE176911ED4454400FD3676 /* Assets.xcassets in Resources */,
+				CC7DA2191ED461010096FF2E /* SubjectSideBarView.xib in Resources */,
+				CC9584F71EDAD9540024C202 /* AssignmentCell.xib in Resources */,
+				CCE176941ED4454400FD3676 /* Main.storyboard in Resources */,
+				CC7DA2231ED532150096FF2E /* SubjectOverviewCell.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CCE176851ED4454400FD3676 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CC14DBBC1ED88A6C006357FA /* SubjectDetailView.swift in Sources */,
+				CC0A90921ED6D7FD005C8552 /* AdjustmentKnob.swift in Sources */,
+				CCE1768F1ED4454400FD3676 /* ViewController.swift in Sources */,
+				CC0A906F1ED5B69D005C8552 /* OnOffSwitchControlAppDelegate.m in Sources */,
+				CCE1769C1ED446B700FD3676 /* GPAWindowController.swift in Sources */,
+				CCE1768D1ED4454400FD3676 /* AppDelegate.swift in Sources */,
+				CC9584FF1EDAE65E0024C202 /* AssignmentCell.swift in Sources */,
+				CC0A90731ED5B9A4005C8552 /* NewSubjectVC.swift in Sources */,
+				CC208CBC1EDBDF9400D3E17A /* AssignmentTableView.swift in Sources */,
+				CC0A90711ED5B69D005C8552 /* OnOffSwitchControl.m in Sources */,
+				CC7DA2251ED534A30096FF2E /* SubjectOverviewCell.swift in Sources */,
+				CC14DBC01ED8954C006357FA /* PieChart.swift in Sources */,
+				CC7DA21B1ED461C00096FF2E /* SubjectSideBarView.swift in Sources */,
+				CC9584FD1EDAE37B0024C202 /* HorizontalSlider.swift in Sources */,
+				CC14DBBA1ED88959006357FA /* HighlightButton.swift in Sources */,
+				CC6747801EDF028D000A7591 /* AddDatabaseVC.swift in Sources */,
+				CC7DA21D1ED463C80096FF2E /* Subject.swift in Sources */,
+				CC9585011EDB049C0024C202 /* AddAssignmentVC.swift in Sources */,
+				CC0A90701ED5B69D005C8552 /* OnOffSwitchControlCell.m in Sources */,
+				CC8FF4D51ED44AAC00FD8AB4 /* CircularProgress.swift in Sources */,
+				CC46BAB71ED839A900D36B10 /* Terminal.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		CCE176921ED4454400FD3676 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CCE176931ED4454400FD3676 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		CCE176961ED4454400FD3676 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		CCE176971ED4454400FD3676 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		CCE176991ED4454400FD3676 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = NO;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = GR353CPP2V;
+				INFOPLIST_FILE = "GPA Manager/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.themoon2000.GPA-Manager";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "GPA Manager-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		CCE1769A1ED4454400FD3676 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = NO;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = GR353CPP2V;
+				INFOPLIST_FILE = "GPA Manager/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.themoon2000.GPA-Manager";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "GPA Manager-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CCE176841ED4454400FD3676 /* Build configuration list for PBXProject "GPA Manager" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CCE176961ED4454400FD3676 /* Debug */,
+				CCE176971ED4454400FD3676 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CCE176981ED4454400FD3676 /* Build configuration list for PBXNativeTarget "GPA Manager" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CCE176991ED4454400FD3676 /* Debug */,
+				CCE1769A1ED4454400FD3676 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = CCE176811ED4454400FD3676 /* Project object */;
+}

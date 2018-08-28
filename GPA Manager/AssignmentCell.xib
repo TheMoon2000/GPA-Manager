@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="11762" systemVersion="16F73" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="11762"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner"/>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <customView identifier="Assignment" id="c22-O7-iKe" customClass="AssignmentCell" customModule="GPA_Manager" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="527" height="100"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <subviews>
+                <customView translatesAutoresizingMaskIntoConstraints="NO" id="OwF-xB-fmi">
+                    <rect key="frame" x="7" y="6" width="513" height="88"/>
+                </customView>
+                <popUpButton translatesAutoresizingMaskIntoConstraints="NO" id="wnm-hF-us4">
+                    <rect key="frame" x="309" y="50" width="183" height="26"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="183" id="4g6-cF-UXL"/>
+                        <constraint firstAttribute="height" constant="26" id="wfm-WU-Ynj"/>
+                    </constraints>
+                    <popUpButtonCell key="cell" type="bevel" title="Homework &amp; Assignments" bezelStyle="regularSquare" alignment="center" lineBreakMode="truncatingTail" state="on" imageScaling="proportionallyDown" inset="2" autoenablesItems="NO" selectedItem="tEa-1V-pb9" id="bHk-T1-il9">
+                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                        <font key="font" metaFont="menu"/>
+                        <menu key="menu" autoenablesItems="NO" id="feO-lu-VEL">
+                            <items>
+                                <menuItem title="Homework &amp; Assignments" state="on" enabled="NO" id="tEa-1V-pb9"/>
+                                <menuItem isSeparatorItem="YES" id="Wp5-ne-zNS"/>
+                            </items>
+                        </menu>
+                    </popUpButtonCell>
+                    <connections>
+                        <action selector="changeCategory:" target="c22-O7-iKe" id="Ygg-VC-ZPN"/>
+                    </connections>
+                </popUpButton>
+                <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fE6-do-KRx">
+                    <rect key="frame" x="26" y="54" width="284" height="23"/>
+                    <textFieldCell key="cell" lineBreakMode="charWrapping" truncatesLastVisibleLine="YES" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" focusRingType="none" title="Semester Exam Paper 1" id="l8D-Km-x26">
+                        <font key="font" size="15" name="Raleway-Medium"/>
+                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <textField focusRingType="none" verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oFL-tG-nEt">
+                    <rect key="frame" x="466" y="25" width="35" height="17"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="31" id="ZMh-fr-UdA"/>
+                    </constraints>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" focusRingType="none" alignment="left" title="100" placeholderString="" id="9fL-aH-eY9">
+                        <font key="font" metaFont="system"/>
+                        <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <customView translatesAutoresizingMaskIntoConstraints="NO" id="Urn-Gs-UlV" customClass="HorizontalSlider" customModule="GPA_Manager" customModuleProvider="target">
+                    <rect key="frame" x="28" y="22" width="400" height="21"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="21" id="gYm-i0-sB4"/>
+                    </constraints>
+                </customView>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gXl-jd-vMK">
+                    <rect key="frame" x="459" y="25" width="9" height="17"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="5" id="TMa-dr-fKr"/>
+                    </constraints>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="/" id="QPW-Vy-lxn">
+                        <font key="font" metaFont="system"/>
+                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <textField focusRingType="none" verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dxw-uX-Mli">
+                    <rect key="frame" x="429" y="25" width="32" height="17"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="28" id="pfP-qy-UkG"/>
+                    </constraints>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" focusRingType="none" alignment="right" title="175" placeholderString="" id="6JP-lt-rOO">
+                        <font key="font" metaFont="system"/>
+                        <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <button hidden="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5M1-zk-TcV">
+                    <rect key="frame" x="499" y="43" width="15" height="15"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="15" id="16g-d3-Uav"/>
+                        <constraint firstAttribute="width" constant="15" id="lRy-9g-Bqd"/>
+                    </constraints>
+                    <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="Delete" imagePosition="only" alignment="center" imageScaling="proportionallyUpOrDown" inset="2" id="VBD-ip-4L9">
+                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                        <font key="font" metaFont="system"/>
+                    </buttonCell>
+                    <connections>
+                        <action selector="deleteRow:" target="c22-O7-iKe" id="8x3-xd-JBa"/>
+                    </connections>
+                </button>
+            </subviews>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="OwF-xB-fmi" secondAttribute="bottom" constant="6" id="1j6-na-1ud"/>
+                <constraint firstItem="5M1-zk-TcV" firstAttribute="centerY" secondItem="c22-O7-iKe" secondAttribute="centerY" id="56p-Jr-lWh"/>
+                <constraint firstAttribute="trailing" secondItem="OwF-xB-fmi" secondAttribute="trailing" constant="7" id="6ic-ye-Tnj"/>
+                <constraint firstItem="Urn-Gs-UlV" firstAttribute="leading" secondItem="c22-O7-iKe" secondAttribute="leading" constant="28" id="9yg-oT-Xie"/>
+                <constraint firstAttribute="bottom" secondItem="oFL-tG-nEt" secondAttribute="bottom" constant="25" id="AYr-oU-gDz"/>
+                <constraint firstAttribute="bottom" secondItem="Dxw-uX-Mli" secondAttribute="bottom" constant="25" id="Crv-7r-FxF"/>
+                <constraint firstItem="gXl-jd-vMK" firstAttribute="leading" secondItem="Urn-Gs-UlV" secondAttribute="trailing" constant="33" id="Em8-dO-3rq"/>
+                <constraint firstAttribute="trailing" secondItem="5M1-zk-TcV" secondAttribute="trailing" constant="13" id="FVO-uO-eae"/>
+                <constraint firstItem="wnm-hF-us4" firstAttribute="leading" secondItem="fE6-do-KRx" secondAttribute="trailing" constant="1" id="GCs-L1-4QU"/>
+                <constraint firstAttribute="bottom" secondItem="Urn-Gs-UlV" secondAttribute="bottom" constant="22" id="KMJ-gO-1wQ"/>
+                <constraint firstItem="wnm-hF-us4" firstAttribute="top" secondItem="c22-O7-iKe" secondAttribute="top" constant="24" id="Ob8-UM-KrV"/>
+                <constraint firstItem="oFL-tG-nEt" firstAttribute="leading" secondItem="gXl-jd-vMK" secondAttribute="trailing" constant="2" id="Rgf-ta-dNg"/>
+                <constraint firstItem="gXl-jd-vMK" firstAttribute="leading" secondItem="Dxw-uX-Mli" secondAttribute="trailing" constant="2" id="V4c-bE-sx2"/>
+                <constraint firstAttribute="bottom" secondItem="gXl-jd-vMK" secondAttribute="bottom" constant="25" id="ecZ-AQ-dCg"/>
+                <constraint firstItem="fE6-do-KRx" firstAttribute="top" secondItem="c22-O7-iKe" secondAttribute="top" constant="23" id="nFJ-le-1CF"/>
+                <constraint firstItem="OwF-xB-fmi" firstAttribute="top" secondItem="c22-O7-iKe" secondAttribute="top" constant="6" id="nMK-SL-RUo"/>
+                <constraint firstAttribute="trailing" secondItem="wnm-hF-us4" secondAttribute="trailing" constant="35" id="rEb-AA-Jdn"/>
+                <constraint firstItem="OwF-xB-fmi" firstAttribute="leading" secondItem="c22-O7-iKe" secondAttribute="leading" constant="7" id="rpD-6k-cyn"/>
+                <constraint firstItem="fE6-do-KRx" firstAttribute="leading" secondItem="c22-O7-iKe" secondAttribute="leading" constant="28" id="tDE-LU-wrD"/>
+                <constraint firstAttribute="trailing" secondItem="oFL-tG-nEt" secondAttribute="trailing" constant="28" id="xeX-eO-fWO"/>
+            </constraints>
+            <connections>
+                <outlet property="assignmentNameTextField" destination="fE6-do-KRx" id="jUP-gL-miw"/>
+                <outlet property="background" destination="OwF-xB-fmi" id="1Hd-kH-qeH"/>
+                <outlet property="bar" destination="Urn-Gs-UlV" id="kNP-0P-gBM"/>
+                <outlet property="category" destination="wnm-hF-us4" id="uLi-aF-aPW"/>
+                <outlet property="deleteButton" destination="5M1-zk-TcV" id="Zdg-eP-3Cm"/>
+                <outlet property="scoreTextField" destination="Dxw-uX-Mli" id="crN-U7-jTq"/>
+                <outlet property="totalTextField" destination="oFL-tG-nEt" id="0I1-73-q6c"/>
+            </connections>
+            <point key="canvasLocation" x="162.5" y="82"/>
+        </customView>
+    </objects>
+    <resources>
+        <image name="Delete" width="96" height="96"/>
+    </resources>
+</document>
