@@ -13,7 +13,7 @@ You can add, remove, or change your scores for each assignment for every subject
 
 You can view the weightings for each score category and how you did from the interactive pie chart:
 
-<img src="Screenshot/subject.png" width="90%" />
+<img src="Screenshots/subject.png" width="90%" />
 
 When this app was first released, I had a server with information about the current grade bins (because in the IB curriculum the boundaries change every year) that the app could connect to, but now the server's no longer maintained. However, you can manually adjust the boundaries by dragging the interactive view.
 
