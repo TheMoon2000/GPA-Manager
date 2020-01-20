@@ -17,4 +17,4 @@ You can view the weightings for each score category and how you did from the int
 
 When this app was first released, I had a server with information about the current grade bins (because in the IB curriculum the boundaries change every year) that the app could connect to, but now the server's no longer maintained. However, you can manually adjust the boundaries by dragging the interactive view.
 
-<img scr="Screenshots/boundaries.png" width="90%" />
+<img src="Screenshots/boundaries.png" width="90%" />
