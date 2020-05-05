@@ -39,7 +39,7 @@ class HighlightButton: NSButton {
         bezierPath.appendArc(withCenter: NSPoint(x: frame.width - radius, y: frame.height - radius), radius: radius, startAngle: 0, endAngle: 90) // Top left corner
         bezierPath.line(to: NSMakePoint(radius, frame.height))
 
-        if self.state == 1 {
+        if self.state == .on {
             
             NSColor(red: 0.25, green: 0.55, blue: 0.75, alpha: 1).setFill()
             bezierPath.fill()
@@ -60,7 +60,7 @@ class HighlightButton: NSButton {
         }
     }
     
-    override var state: Int {
+    override var state: NSControl.StateValue {
         didSet {
             self.needsDisplay = true
         }
@@ -76,7 +76,7 @@ class HighlightButton: NSButton {
         label.alignment = .center
         label.lineBreakMode = .byTruncatingMiddle
         addSubview(label)
-        self.addTrackingArea(NSTrackingArea(rect: self.bounds, options: NSTrackingAreaOptions(rawValue: 129), owner: self, userInfo: nil))
+        self.addTrackingArea(NSTrackingArea(rect: self.bounds, options: NSTrackingArea.Options(rawValue: 129), owner: self, userInfo: nil))
     }
     
     var mouseIsIn = false

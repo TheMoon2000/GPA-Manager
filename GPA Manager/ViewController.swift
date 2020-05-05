@@ -82,12 +82,12 @@ class ViewController: NSViewController, NSTableViewDelegate, NSTableViewDataSour
                 NSKeyedArchiver.archiveRootObject(subjects.map({$0.encodedForm}), toFile: dataPath)
                 if subjects.count != oldValue.count {
                     selectedSubject = ""
-                    subjects.sort(by: { data -> Bool in
+                    subjects.sort(by: { s0, s1 -> Bool in
 //                    $0.0.group < $0.1.group && $0.0.fullname < $0.1.fullname
-                        if data.0.group != data.1.group {
-                            return data.0.group < data.1.group
+                        if s0.group != s1.group {
+                            return s0.group < s1.group
                         } else {
-                            return data.0.name < data.1.name
+                            return s0.name < s1.name
                         }
                     })
                     self.subjectSidebar.reloadData()
@@ -113,7 +113,7 @@ class ViewController: NSViewController, NSTableViewDelegate, NSTableViewDataSour
 
     
     func windowWillResize() {
-        constraint = NSLayoutConstraint.constraints(withVisualFormat: "[firstview(\(splitViewLeft.frame.width))]", options: NSLayoutFormatOptions.alignmentMask, metrics: nil, views: ["firstview": splitViewLeft])
+        constraint = NSLayoutConstraint.constraints(withVisualFormat: "[firstview(\(splitViewLeft.frame.width))]", options: NSLayoutConstraint.FormatOptions.alignmentMask, metrics: nil, views: ["firstview": splitViewLeft])
         splitViewLeft.addConstraints(constraint)
     }
     
@@ -135,15 +135,15 @@ class ViewController: NSViewController, NSTableViewDelegate, NSTableViewDataSour
         
         mainvc = self
         
-        let sidebarNib = NSNib(nibNamed: "SubjectSideBarView", bundle: Bundle.main)
-        subjectSidebar.register(sidebarNib, forIdentifier: "Subject")
-        subjectSidebar.register(sidebarNib, forIdentifier: "Label")
+        let sidebarNib = NSNib(nibNamed: NSNib.Name(rawValue: "SubjectSideBarView"), bundle: Bundle.main)
+        subjectSidebar.register(sidebarNib, forIdentifier: NSUserInterfaceItemIdentifier(rawValue: "Subject"))
+        subjectSidebar.register(sidebarNib, forIdentifier: NSUserInterfaceItemIdentifier(rawValue: "Label"))
         
-        let subjectOverviewNib = NSNib(nibNamed: "SubjectOverviewCell", bundle: Bundle.main)
-        overviewTable.register(subjectOverviewNib, forIdentifier: "Subject Overview")
+        let subjectOverviewNib = NSNib(nibNamed: NSNib.Name(rawValue: "SubjectOverviewCell"), bundle: Bundle.main)
+        overviewTable.register(subjectOverviewNib, forIdentifier: NSUserInterfaceItemIdentifier(rawValue: "Subject Overview"))
         
-        let assignmentView = NSNib(nibNamed: "AssignmentCell", bundle: Bundle.main)
-        assignmentTable.register(assignmentView, forIdentifier: "Assignment")
+        let assignmentView = NSNib(nibNamed: NSNib.Name(rawValue: "AssignmentCell"), bundle: Bundle.main)
+        assignmentTable.register(assignmentView, forIdentifier: NSUserInterfaceItemIdentifier(rawValue: "Assignment"))
         
         banner.wantsLayer = true
         banner.layer?.backgroundColor = NSColor(red: 0.3, green: 0.58, blue: 0.78, alpha: 1).cgColor
@@ -156,6 +156,8 @@ class ViewController: NSViewController, NSTableViewDelegate, NSTableViewDataSour
         
         reloadDatabasePopUpButton()
         initialize()
+        
+        view.appearance = NSAppearance(named: .aqua)
     }
     
     func reloadDatabasePopUpButton() {
@@ -213,7 +215,7 @@ class ViewController: NSViewController, NSTableViewDelegate, NSTableViewDataSour
     
     @IBAction func changeFile(_ sender: NSPopUpButton) {
         if sender.title == "Add New..." {
-            self.performSegue(withIdentifier: "Add Database", sender: sender)
+            self.performSegue(withIdentifier: NSStoryboard.SegueIdentifier(rawValue: "Add Database"), sender: sender)
             sender.title = UserDefaults.standard.string(forKey: "File Name") ?? "Default"
         } else {
             UserDefaults.standard.set(sender.title, forKey: "File Name")
@@ -271,28 +273,28 @@ class ViewController: NSViewController, NSTableViewDelegate, NSTableViewDataSour
     func tableView(_ tableView: NSTableView, viewFor tableColumn: NSTableColumn?, row: Int) -> NSView? {
         if tableView == subjectSidebar {
             if row == 1 {
-                let cell = subjectSidebar.make(withIdentifier: "Label", owner: self)
+                let cell = subjectSidebar.makeView(withIdentifier: NSUserInterfaceItemIdentifier(rawValue: "Label"), owner: self)
                 return cell
             } else if row == 0 {
-                let cell = subjectSidebar.make(withIdentifier: "Subject", owner: self) as! SubjectSideBarView
+                let cell = subjectSidebar.makeView(withIdentifier: NSUserInterfaceItemIdentifier(rawValue: "Subject"), owner: self) as! SubjectSideBarView
                 cell.subjectName.stringValue = "Subjects Overview"
-                cell.subjectImage.image = NSImage(named: "All")
+                cell.subjectImage.image = NSImage(named: NSImage.Name(rawValue: "All"))
                 return cell
             } else {
-                let cell = subjectSidebar.make(withIdentifier: "Subject", owner: self) as! SubjectSideBarView
+                let cell = subjectSidebar.makeView(withIdentifier: NSUserInterfaceItemIdentifier(rawValue: "Subject"), owner: self) as! SubjectSideBarView
                 cell.subjectName.stringValue = subjects[row-2].name + (subjects[row-2].hl ? " HL" : " SL")
-                cell.subjectImage.image = NSImage(named: subjects[row-2].name)
+                cell.subjectImage.image = NSImage(named: NSImage.Name(rawValue: subjects[row-2].name))
                 return cell
             }
         } else if tableView == overviewTable {
-            let cell = overviewTable.make(withIdentifier: "Subject Overview", owner: self) as! SubjectOverviewCell
-            cell.subjectImage.image = NSImage(named: subjects[row].name)
+            let cell = overviewTable.makeView(withIdentifier: NSUserInterfaceItemIdentifier(rawValue: "Subject Overview"), owner: self) as! SubjectOverviewCell
+            cell.subjectImage.image = NSImage(named: NSImage.Name(rawValue: subjects[row].name))
             cell.subjectName.stringValue = subjects[row].fullname
             cell.score.stringValue = subjects[row].scoreOutOf7 == -1 ? "N/A" : "\(subjects[row].scoreOutOf7)/7"
             cell.percentage = subjects[row].percentage
             return cell
         } else {
-            let cell = assignmentTable.make(withIdentifier: "Assignment", owner: self) as! AssignmentCell
+            let cell = assignmentTable.makeView(withIdentifier: NSUserInterfaceItemIdentifier(rawValue: "Assignment"), owner: self) as! AssignmentCell
             cell.assignmentName = currentSubject.readableAssignments[row].name
             cell.assignmentNameTextField.stringValue = cell.assignmentName
             cell.category.removeAllItems()
@@ -365,7 +367,7 @@ class ViewController: NSViewController, NSTableViewDelegate, NSTableViewDataSour
     
     @IBAction func subjectSettings(_ sender: NSButton) {
         settingsMode = true
-        self.performSegue(withIdentifier: "Subject Settings", sender: sender)
+        self.performSegue(withIdentifier: NSStoryboard.SegueIdentifier(rawValue: "Subject Settings"), sender: sender)
     }
     
 }

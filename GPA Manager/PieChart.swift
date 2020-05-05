@@ -97,7 +97,7 @@ class PieChart: NSView {
     }
     
     override func awakeFromNib() {
-        self.addTrackingArea(NSTrackingArea(rect: self.bounds, options: NSTrackingAreaOptions(rawValue: 131), owner: self, userInfo: nil))
+        self.addTrackingArea(NSTrackingArea(rect: self.bounds, options: NSTrackingArea.Options(rawValue: 131), owner: self, userInfo: nil))
     }
     
     var assignments = [(name: String, category: String, score: String, startAngle: CGFloat, endEngle: CGFloat, borderAngle: CGFloat)]()
@@ -178,7 +178,7 @@ class PieChart: NSView {
         }
         
         self.removeTrackingArea(self.trackingAreas[0])
-        self.addTrackingArea(NSTrackingArea(rect: self.bounds, options: NSTrackingAreaOptions(rawValue: 131), owner: self, userInfo: nil))
+        self.addTrackingArea(NSTrackingArea(rect: self.bounds, options: NSTrackingArea.Options(rawValue: 131), owner: self, userInfo: nil))
     }
     
     override func mouseExited(with event: NSEvent) {

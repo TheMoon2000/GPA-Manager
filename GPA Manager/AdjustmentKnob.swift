@@ -25,7 +25,7 @@ class AdjustmentKnob: NSView {
             if updateView {self.needsDisplay = true} else {
                 if oldValue != values {
                     if #available(OSX 10.11, *) {
-                        NSHapticFeedbackManager.defaultPerformer().perform(NSHapticFeedbackPattern.alignment, performanceTime: NSHapticFeedbackPerformanceTime.now)
+                        NSHapticFeedbackManager.defaultPerformer.perform(NSHapticFeedbackManager.FeedbackPattern.alignment, performanceTime: .now)
                     } else {
                         // Fallback on earlier versions
                     }
@@ -77,7 +77,7 @@ class AdjustmentKnob: NSView {
     }
     
     override func awakeFromNib() {
-        self.addTrackingArea(NSTrackingArea(rect: self.bounds, options: NSTrackingAreaOptions(rawValue: 131), owner: self, userInfo: nil))
+        self.addTrackingArea(NSTrackingArea(rect: self.bounds, options: NSTrackingArea.Options(rawValue: 131), owner: self, userInfo: nil))
     }
 
     override func draw(_ dirtyRect: NSRect) {
@@ -148,7 +148,7 @@ class AdjustmentKnob: NSView {
                         combinedPortion = values[i] + values[i+1]
                     }
                     dragging = true
-                    NSCursor.closedHand().set()
+                    NSCursor.closedHand.set()
                     return
                 }
             }
@@ -163,14 +163,14 @@ class AdjustmentKnob: NSView {
         self.mouseMoved(with: theEvent)
         if values.count != 0 {
             DispatchQueue.main.asyncAfter(deadline: .now(), execute: {
-                NSCursor.openHand().set()
+                NSCursor.openHand.set()
             })
         }
     }
     
     override func mouseExited(with theEvent: NSEvent) {
         inView = false
-        NSCursor.arrow().set()
+        NSCursor.arrow.set()
         if !pressed {
             sheetController?.hoverPopover.close()
             hoverLevel = -1
@@ -284,9 +284,9 @@ class AdjustmentKnob: NSView {
         pressed = false
         dragging = false
         if inView {
-            NSCursor.openHand().set()
+            NSCursor.openHand.set()
         } else {
-            NSCursor.arrow().set()
+            NSCursor.arrow.set()
             sheetController?.hoverPopover.close()
         }
         Swift.print(values)

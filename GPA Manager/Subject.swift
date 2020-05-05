@@ -127,7 +127,7 @@ struct Subject {
                 all.append( (a, i, self.assignments[i]![a]![2], self.assignments[i]![a]![0], self.assignments[i]![a]![1]) )
             }
         }
-        return all.sorted(by: {$0.0.timeReference < $0.1.timeReference})
+        return all.sorted {$0.timeReference < $1.timeReference}
     }
     
     var encodedForm: [NSObject] {

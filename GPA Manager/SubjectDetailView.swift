@@ -30,14 +30,14 @@ class SubjectDetailView: NSView {
     
     override func viewDidUnhide() {
         super.viewDidUnhide()
-        self.addTrackingArea(NSTrackingArea(rect: self.bounds, options: NSTrackingAreaOptions(rawValue: 131), owner: self, userInfo: nil))
+        self.addTrackingArea(NSTrackingArea(rect: self.bounds, options: NSTrackingArea.Options(rawValue: 131), owner: self, userInfo: nil))
     }
     
     var currentSubject: Subject {
         return mainvc!.currentSubject
     }
     
-    var titleAttributes: [String: AnyObject] {
+    var titleAttributes: [NSAttributedString.Key: AnyObject] {
         
         let pstyle = NSMutableParagraphStyle()
         pstyle.lineHeightMultiple = 1.5
@@ -45,29 +45,29 @@ class SubjectDetailView: NSView {
         pstyle.paragraphSpacing = 12
         
         return [
-            NSFontAttributeName: NSFont(name: "Raleway Semibold",size: 16)!,
-            NSParagraphStyleAttributeName: pstyle
+            .font: NSFont(name: "Raleway Semibold",size: 16)!,
+            .paragraphStyle: pstyle
         ]
     
     }
     
-    var contentAttributes: [String: AnyObject] {
+    var contentAttributes: [NSAttributedString.Key: AnyObject] {
         
         let pstyle = NSMutableParagraphStyle()
         pstyle.lineHeightMultiple = 1.3
         pstyle.paragraphSpacing = 8
         
         return [
-            NSFontAttributeName: NSFont(name: "Raleway",size: 14)!,
-            NSParagraphStyleAttributeName: pstyle
+            .font: NSFont(name: "Raleway",size: 14)!,
+            .paragraphStyle: pstyle
         ]
         
     }
     
     func initialize() {
         
-        leftTab.state = 1
-        rightTab.state = 0
+        leftTab.state = .on
+        rightTab.state = .off
         
         leftTab.titleString = "Assignment Categories"
         rightTab.titleString = "My Current Scores"
@@ -137,8 +137,8 @@ class SubjectDetailView: NSView {
 
     // Triggered when the user clicks the left tab
     @IBAction func left(_ sender: HighlightButton) {
-        leftTab.state = 1
-        rightTab.state = 0
+        leftTab.state = .on
+        rightTab.state = .off
         
         categoryView.isHidden = false
         scoresView.isHidden = true
@@ -149,8 +149,8 @@ class SubjectDetailView: NSView {
     
     // Triggered when user clicks the right tab
     @IBAction func right(_ sender: HighlightButton) {
-        leftTab.state = 0
-        rightTab.state = 1
+        leftTab.state = .off
+        rightTab.state = .on
         
         categoryView.isHidden = true
         scoresView.isHidden = false
@@ -166,7 +166,7 @@ class SubjectDetailView: NSView {
         // Programmatically generating an attributed label inside an NSView, which will be displayed in the popover
         
         let size = NSString(string: title + percentage).size(withAttributes: [
-            NSFontAttributeName: NSFont(name: "Raleway Medium", size: 13.5)!, // Specify the font
+            .font: NSFont(name: "Raleway Medium", size: 13.5)!, // Specify the font
             ])
         let view = NSView(frame: NSRect(x: 0, y: 0, width: size.width + 16, height: size.height + 8))
         let label = NSTextField(frame: NSRect(origin: CGPoint(x:4, y:4), size: NSMakeSize(size.width + 8, size.height)))
@@ -197,7 +197,7 @@ class SubjectDetailView: NSView {
         
         // Programmatically generating an attributed label inside an NSView, which will be displayed in the popover
         let size = NSString(string: title).size(withAttributes: [
-            NSFontAttributeName: NSFont(name: "Raleway Medium", size: 13.5)!, // Specify font
+            .font: NSFont(name: "Raleway Medium", size: 13.5)!, // Specify font
             ]) // Calculate the width and height of the text
         let view = NSView(frame: NSRect(x: 0, y: 0, width: size.width + 16, height: size.height + 8))
         let label = NSTextField(frame: NSRect(origin: CGPoint(x:4, y:4), size: NSMakeSize(size.width + 8, size.height)))

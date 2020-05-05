@@ -34,7 +34,7 @@ class SubjectSideBarView: NSTableCellView {
         return name.joined(separator: " ")
     }
     
-    override var backgroundStyle: NSBackgroundStyle {
+    override var backgroundStyle: NSView.BackgroundStyle {
         didSet {
             if backgroundStyle == .dark || selectedSubject == realSubjectName {
                 

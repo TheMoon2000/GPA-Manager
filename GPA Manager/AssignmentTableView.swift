@@ -13,12 +13,12 @@ class AssignmentTableView: NSTableView {
     var currentRow = -1
 
     override func awakeFromNib() {
-        self.addTrackingArea(NSTrackingArea(rect: self.bounds, options: NSTrackingAreaOptions(rawValue: 131), owner: self, userInfo: nil))
+        self.addTrackingArea(NSTrackingArea(rect: self.bounds, options: NSTrackingArea.Options(rawValue: 131), owner: self, userInfo: nil))
     }
     
     override func draw(_ dirtyRect: NSRect) {
         self.removeTrackingArea(self.trackingAreas[0])
-        self.addTrackingArea(NSTrackingArea(rect: self.bounds, options: NSTrackingAreaOptions(rawValue: 131), owner: self, userInfo: nil))
+        self.addTrackingArea(NSTrackingArea(rect: self.bounds, options: NSTrackingArea.Options(rawValue: 131), owner: self, userInfo: nil))
     }
     
     override func mouseMoved(with event: NSEvent) {
@@ -52,7 +52,7 @@ class AssignmentTableView: NSTableView {
         alert.informativeText = "This action cannot be undone."
         alert.addButton(withTitle: "Delete Assignment").keyEquivalent = "\r"
         alert.addButton(withTitle: "Cancel")
-        alert.icon = NSApplication.shared().applicationIconImage
+        alert.icon = NSApplication.shared.applicationIconImage
         alert.beginSheetModal(for: self.window!) {reponse in
             let cell = self.view(atColumn: 0, row: row, makeIfNecessary: false) as! AssignmentCell
             self.removeRows(at: IndexSet(integer: row), withAnimation: .effectFade)

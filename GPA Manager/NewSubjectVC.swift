@@ -22,7 +22,7 @@ class NewSubjectViewController: NSViewController {
     @IBOutlet weak var addSubjectButton: NSButton!
     @IBOutlet weak var subjectSelection: NSPopUpButton!
     
-    let vc = NSViewController(nibName: "Main", bundle: Bundle.main)!
+    let vc = NSViewController(nibName: NSNib.Name(rawValue: "Main"), bundle: Bundle.main)
     
     let dragPopover = NSPopover()
     let hoverPopover = NSPopover()
@@ -118,13 +118,13 @@ class NewSubjectViewController: NSViewController {
     
     @IBAction func chooseSubject(_ sender: NSPopUpButton) {
         addSubjectButton.isEnabled = true
-        let fullName = sender.title + (hl.state == 1 ? " HL" : " SL")
+        let fullName = sender.title + (hl.state == .on ? " HL" : " SL")
         if let b = subjectBoundaries[fullName] {
             boundaries.values = b
         }
         if SL_Only.contains(sender.title) {
             hl.isEnabled = false
-            hl.state = 0
+            hl.state = .off
         } else {
             hl.isEnabled = true
         }
@@ -132,7 +132,7 @@ class NewSubjectViewController: NSViewController {
     
     
     @IBAction func switchLevel(sender: NSButton) {
-        let fullName = subjectSelection.title + (hl.state == 1 ? " HL" : " SL")
+        let fullName = subjectSelection.title + (hl.state == .on ? " HL" : " SL")
         if let b = subjectBoundaries[fullName] {
             boundaries.values = b
         }
@@ -155,7 +155,7 @@ class NewSubjectViewController: NSViewController {
     }
     
     @IBAction func addSubject(_ sender: NSButton) {
-        let fullTitle = subjectSelection.title + (hl.state == 1 ? " HL" : " SL")
+        let fullTitle = subjectSelection.title + (hl.state == .on ? " HL" : " SL")
         if sender.title == "Add Subject" {
             var cDict = [String: CGFloat]()
             if let c = subjectCategories[fullTitle] {
@@ -170,7 +170,7 @@ class NewSubjectViewController: NSViewController {
                 aDict[i] = [:]
             }
             
-            mainvc!.addSubject(Subject(name: subjectSelection.title, group: subjectSelection.selectedTag(), categories: cDict, hl: hl.state == 1, assignments: aDict, boundaries: boundaries.values))
+            mainvc!.addSubject(Subject(name: subjectSelection.title, group: subjectSelection.selectedTag(), categories: cDict, hl: hl.state == .on, assignments: aDict, boundaries: boundaries.values))
             self.dismiss(sender)
             Swift.print(cDict)
         } else {

@@ -16,6 +16,7 @@ class GPAWindow: NSWindowController, NSWindowDelegate {
         window?.isMovableByWindowBackground = true
         window?.titleVisibility = .hidden
         window?.delegate = self
+        window?.appearance = NSAppearance(named: .aqua)
     }
 
     func windowWillStartLiveResize(_ notification: Notification) {

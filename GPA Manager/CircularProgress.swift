@@ -40,10 +40,11 @@ class CircularProgress: NSView {
         
     }
     
-    override static func defaultAnimation(forKey key: String) -> Any? {
-        if key == "percentage" {
+    override class func defaultAnimation(forKey key: NSAnimatablePropertyKey) -> Any? {
+        if key.rawValue == "percentage" {
             return CABasicAnimation()
         }
+        
         return super.defaultAnimation(forKey: key)
     }
     
