@@ -28,6 +28,8 @@
 		CC9584FD1EDAE37B0024C202 /* HorizontalSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC9584FC1EDAE37B0024C202 /* HorizontalSlider.swift */; };
 		CC9584FF1EDAE65E0024C202 /* AssignmentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC9584FE1EDAE65E0024C202 /* AssignmentCell.swift */; };
 		CC9585011EDB049C0024C202 /* AddAssignmentVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC9585001EDB049C0024C202 /* AddAssignmentVC.swift */; };
+		CCBD0C8D23D65E6C00A30486 /* Screenshots in Resources */ = {isa = PBXBuildFile; fileRef = CCBD0C8C23D65E6C00A30486 /* Screenshots */; };
+		CCBD0C8F23D65F9F00A30486 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = CCBD0C8E23D65F9F00A30486 /* README.md */; };
 		CCE1768D1ED4454400FD3676 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCE1768C1ED4454400FD3676 /* AppDelegate.swift */; };
 		CCE1768F1ED4454400FD3676 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCE1768E1ED4454400FD3676 /* ViewController.swift */; };
 		CCE176911ED4454400FD3676 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CCE176901ED4454400FD3676 /* Assets.xcassets */; };
@@ -61,6 +63,8 @@
 		CC9584FC1EDAE37B0024C202 /* HorizontalSlider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HorizontalSlider.swift; sourceTree = "<group>"; };
 		CC9584FE1EDAE65E0024C202 /* AssignmentCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AssignmentCell.swift; sourceTree = "<group>"; };
 		CC9585001EDB049C0024C202 /* AddAssignmentVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddAssignmentVC.swift; sourceTree = "<group>"; };
+		CCBD0C8C23D65E6C00A30486 /* Screenshots */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Screenshots; sourceTree = "<group>"; };
+		CCBD0C8E23D65F9F00A30486 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		CCE176891ED4454400FD3676 /* GPA Manager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "GPA Manager.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CCE1768C1ED4454400FD3676 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CCE1768E1ED4454400FD3676 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -121,6 +125,8 @@
 		CCE176801ED4454400FD3676 = {
 			isa = PBXGroup;
 			children = (
+				CCBD0C8E23D65F9F00A30486 /* README.md */,
+				CCBD0C8C23D65E6C00A30486 /* Screenshots */,
 				CC0A90691ED5B69D005C8552 /* OnOffSwitchControlAppDelegate.h */,
 				CC0A906A1ED5B69D005C8552 /* OnOffSwitchControlAppDelegate.m */,
 				CC0A906B1ED5B69D005C8552 /* OnOffSwitchControlCell.h */,
@@ -231,7 +237,9 @@
 				CCE176911ED4454400FD3676 /* Assets.xcassets in Resources */,
 				CC7DA2191ED461010096FF2E /* SubjectSideBarView.xib in Resources */,
 				CC9584F71EDAD9540024C202 /* AssignmentCell.xib in Resources */,
+				CCBD0C8F23D65F9F00A30486 /* README.md in Resources */,
 				CCE176941ED4454400FD3676 /* Main.storyboard in Resources */,
+				CCBD0C8D23D65E6C00A30486 /* Screenshots in Resources */,
 				CC7DA2231ED532150096FF2E /* SubjectOverviewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
